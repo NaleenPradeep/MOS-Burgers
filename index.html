@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Items</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--<link rel="stylesheet" href="css/bootstrap.css">-->
+</head>
+<body>
+
+    <h1 id="group-header"><center></center></h1>
+    
+
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Item Code</th>
+                <th>Item Name</th>
+                <th>Price (LKR)</th>
+                <th>Discount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Burgers Group -->
+            <tr class="group-header">
+                <td colspan="4">Burgers</td>
+            </tr>
+            <tr>
+                <td>B1013</td>
+                <td>Crispy Chicken Burger (Regular)</td>
+                <td>1200.00</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>B1014</td>
+                <td>Crispy Chicken Burger (Large)</td>
+                <td>1600.00</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>B1015</td>
+                <td>Paneer Burger</td>
+                <td>900.00</td>
+                <td>-</td>
+            </tr>
+            <!-- Submarines Group -->
+            <tr class="group-header">
+                <td colspan="4">Submarines</td>
+            </tr>
+            <tr>
+                <td>B1016</td>
+                <td>Crispy Chicken Submarine (Large)</td>
+                <td>2000.00</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>B1017</td>
+                <td>Crispy Chicken Submarine (Regular)</td>
+                <td>1500.00</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>B1018</td>
+                <td>Chicken Submarine (Large)</td>
+                <td>1800.00</td>
+                <td>3%</td>
+            </tr>
+            <tr>
+                <td>B1019</td>
+                <td>Chicken Submarine (Regular)</td>
+                <td>1400.00</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>B1020</td>
+                <td>Grinder Submarine</td>
+                <td>2300.00</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>B1021</td>
+                <td>Cheese Submarine</td>
+                <td>2200.00</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>B1022</td>
+                <td>Double Cheese n Chicken Submarine</td>
+                <td>2400.00</td>
+                <td>16%</td>
+            </tr>
+            <tr>
+                <td>B1023</td>
+                <td>Special Hoggie Submarine</td>
+                <td>2800.00</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>B1024</td>
+                <td>MOS Special Submarine</td>
+                <td>3000.00</td>
+                <td>-</td>
+            </tr>
+            <!-- Fries Group -->
+            <tr class="group-header">
+                <td colspan="4">Fries</td>
+            </tr>
+            <tr>
+                <td>B1025</td>
+                <td>Steak Fries (Large)</td>
+                <td>1200.00</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>B1026</td>
+                <td>Steak Fries (Medium)</td>
+                <td>600.00</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>B1027</td>
+                <td>French Fries (Large)</td>
+                <td>800.00</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>B1028</td>
+                <td>French Fries (Medium)</td>
+                <td>650.00</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>B1029</td>
+                <td>French Fries (Small)</td>
+                <td>450.00</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>B1030</td>
+                <td>Sweet Potato Fries (Large)</td>
+                <td>600.00</td>
+                <td>-</td>
+            </tr>
+            <!-- Pasta Group -->
+            <tr class="group-header">
+                <td colspan="4">Pasta</td>
+            </tr>
+            <tr>
+                <td>B1031</td>
+                <td>Chicken n Cheese Pasta</td>
+                <td>1600.00</td>
+                <td>15%</td>
+            </tr>
+            <tr>
+                <td>B1032</td>
+                <td>Chicken Penne Pasta</td>
+                <td>1700.00</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>B1033</td>
+                <td>Ground Turkey Pasta Bake</td>
+                <td>2900.00</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>B1034</td>
+                <td>Creamy Shrimp Pasta</td>
+                <td>2000.00</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>B1035</td>
+                <td>Lemon Butter Pasta</td>
+                <td>1950.00</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><br>
+
+    <br>
+     
+    <section id="order-form" class="order-form">
+        <form id="foodOrderForm" method="post" class="php-email-form mt-4">
+            <div class="form-group">
+                <label for="burgers">Burgers:</label>
+                <select id="burgers" class="form-control" onchange="updateOrder()">
+                    <option value="0" data-price="0">Select a Burger</option>
+                    <option value="Crispy Chicken Burger (Regular)" data-price="1200">Crispy Chicken Burger (Regular) - 1200 LKR</option>
+                    <option value="Crispy Chicken Burger (Large)" data-price="1600">Crispy Chicken Burger (Large) - 1600 LKR</option>
+                    <option value="Paneer Burger" data-price="900">Paneer Burger - 900 LKR</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="submarines">Submarines:</label>
+                <select id="submarines" class="form-control" onchange="updateOrder()">
+                    <option value="0" data-price="0">Select a Submarine</option>
+                    <option value="Crispy Chicken Submarine (Large)" data-price="2000">Crispy Chicken Submarine (Large) - 2000 LKR</option>
+                    <option value="Crispy Chicken Submarine (Regular)" data-price="1500">Crispy Chicken Submarine (Regular) - 1500 LKR</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Fries">Fries:</label>
+                <select id="Fries" class="form-control" onchange="updateOrder()">
+                    <option value="0" data-price="0">Select Fries</option>
+                    <option value="Steak Fries (Large)" data-price="1200">Steak Fries (Large) - 1200 LKR</option>
+                    <option value="Steak Fries (Medium)" data-price="600">Steak Fries (Medium) - 600 LKR</option>
+                    <option value="French Fries (Large)" data-price="1500">French Fries (Large) - 800 LKR</option>
+                    <option value="French Fries (Medium)" data-price="1500">French Fries (Medium) - 650 LKR</option>
+                    <option value="Sweet Potato Fries (Large)" data-price="600">Sweet Potato Fries (Large) - 600 LKR</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Pasta">Pasta:</label>
+                <select id="Pasta" class="form-control" onchange="updateOrder()">
+                    <option value="0" data-price="0">Select Pasta</option>
+                    <option value="Chicken n Cheese Pasta (Regular)" data-price="1600">Chicken n Cheese Pasta - 1600 LKR</option>
+                    <option value="Chicken Penne Pasta (Regular)" data-price="1700">Chicken Penne Pasta - 1700 LKR</option>
+                    <option value="Ground Turkey Pasta Bake (Regular)" data-price="2900">Ground Turkey Pasta Bake - 2900 LKR</option>
+                    <option value="Creamy Shrimp Pasta (Regular)" data-price="2000">Creamy Shrimp Pasta - 2000 LKR</option>
+                    <option value="Lemon Butter Pasta (Regular)" data-price="1950">Lemon Butter Pasta - 1950 LKR</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+    
+            <!-- Repeat similar structure for Fries and Pasta categories -->
+    
+            <div class="form-group mt-3">
+                <h3>Order Summary:</h3>
+                <ul id="order-summary">
+                    <!-- Selected items will be displayed here -->
+                </ul>
+                <p id="total-price">Total: 0 LKR</p>
+            </div>
+            
+            <center><div class="text-center"><button type="submit" >Order Food</button></div></center>
+        
+        </form>
+    </section>
+    
+    <script src="app.js"></script>
+</body>
+</html>
